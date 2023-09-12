@@ -1,17 +1,22 @@
 package com.driver;
-class A{
-    public static String meth(){
+public class Main {
+
+static class A{
+    public  String meth(){
+
         return "Invoking method from class A";
     }
 }
-class B extends A{
-    public static String meth(){
+static class B extends A{
+
+    public  String meth(){
+        super.meth();
         return "Method is overridden in Extendend class B";
     }
 }
-public class Main {
     public static void main(String[] args) {
         B b1 = new B();
         System.out.println(b1.meth());
     }
 }
+        
